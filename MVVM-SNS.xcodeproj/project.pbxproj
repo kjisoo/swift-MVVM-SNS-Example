@@ -111,6 +111,7 @@
 		E8ECF29C21639D5200041BA8 /* MVVM-SNS */ = {
 			isa = PBXGroup;
 			children = (
+				E8ECF2C22163BC1100041BA8 /* Command */,
 				E8ECF2BF2163A07800041BA8 /* View */,
 				E8ECF2BE2163A06D00041BA8 /* ViewModel */,
 				E8ECF2BD2163A06300041BA8 /* Entity */,
@@ -153,6 +154,13 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E8ECF2C22163BC1100041BA8 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Command;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
