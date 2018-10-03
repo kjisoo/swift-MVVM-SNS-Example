@@ -1,0 +1,15 @@
+# references:
+# * https://www.objc.io/issues/6-build-tools/travis-ci/
+# * https://github.com/supermarin/xcpretty#usage
+osx_image: xcode10
+language: objective-c
+
+cache: 
+  - cocoapods
+
+install:
+  - pod repo update
+  - pod install
+
+script:
+  - set -o pipefail && xcodebuild clean test -workspace MVVM-SNS.xcworkspace -scheme MVVM-SNS -sdk iphonesimulator -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
