@@ -14,12 +14,14 @@
 		E82049152164F2FE0050EAC4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049142164F2FE0050EAC4 /* Post.swift */; };
 		E82049172164F31B0050EAC4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049162164F31B0050EAC4 /* Comment.swift */; };
 		E82049192164F34C0050EAC4 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049182164F34C0050EAC4 /* Like.swift */; };
+		E820491B216506580050EAC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820491A216506580050EAC4 /* LoginViewModel.swift */; };
+		E820491E216512A80050EAC4 /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820491D216512A80050EAC4 /* LoginViewModelSpec.swift */; };
+		E820492121651D6E0050EAC4 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820492021651D6E0050EAC4 /* EmailValidator.swift */; };
 		E8ECF29E21639D5200041BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF29D21639D5200041BA8 /* AppDelegate.swift */; };
 		E8ECF2A021639D5200041BA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF29F21639D5200041BA8 /* ViewController.swift */; };
 		E8ECF2A321639D5200041BA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ECF2A121639D5200041BA8 /* Main.storyboard */; };
 		E8ECF2A521639D5200041BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ECF2A421639D5200041BA8 /* Assets.xcassets */; };
 		E8ECF2A821639D5200041BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ECF2A621639D5200041BA8 /* LaunchScreen.storyboard */; };
-		E8ECF2B321639D5200041BA8 /* MVVM_SNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF2B221639D5200041BA8 /* MVVM_SNSTests.swift */; };
 		E8ECF2C12163A1EA00041BA8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF2C02163A1EA00041BA8 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,9 @@
 		E82049142164F2FE0050EAC4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E82049162164F31B0050EAC4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E82049182164F34C0050EAC4 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		E820491A216506580050EAC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E820491D216512A80050EAC4 /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
+		E820492021651D6E0050EAC4 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		E8ECF29A21639D5200041BA8 /* MVVM-SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-SNS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ECF29D21639D5200041BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8ECF29F21639D5200041BA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		E8ECF2A721639D5200041BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8ECF2A921639D5200041BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8ECF2AE21639D5200041BA8 /* MVVM-SNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-SNSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8ECF2B221639D5200041BA8 /* MVVM_SNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_SNSTests.swift; sourceTree = "<group>"; };
 		E8ECF2B421639D5200041BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8ECF2C02163A1EA00041BA8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +102,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E820491C2165128B0050EAC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E820491D216512A80050EAC4 /* LoginViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E820491F21651D620050EAC4 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				E820492021651D6E0050EAC4 /* EmailValidator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 		E8ECF29121639D5200041BA8 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +141,7 @@
 		E8ECF29C21639D5200041BA8 /* MVVM-SNS */ = {
 			isa = PBXGroup;
 			children = (
+				E820491F21651D620050EAC4 /* Validator */,
 				E8ECF2C22163BC1100041BA8 /* Command */,
 				E8ECF2BF2163A07800041BA8 /* View */,
 				E8ECF2BE2163A06D00041BA8 /* ViewModel */,
@@ -138,7 +159,7 @@
 		E8ECF2B121639D5200041BA8 /* MVVM-SNSTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8ECF2B221639D5200041BA8 /* MVVM_SNSTests.swift */,
+				E820491C2165128B0050EAC4 /* ViewModel */,
 				E8ECF2B421639D5200041BA8 /* Info.plist */,
 			);
 			path = "MVVM-SNSTests";
@@ -159,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				E8ECF2C02163A1EA00041BA8 /* BaseViewModel.swift */,
+				E820491A216506580050EAC4 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -379,7 +401,9 @@
 				E82049172164F31B0050EAC4 /* Comment.swift in Sources */,
 				E82049152164F2FE0050EAC4 /* Post.swift in Sources */,
 				E82049132164F2CA0050EAC4 /* User.swift in Sources */,
+				E820492121651D6E0050EAC4 /* EmailValidator.swift in Sources */,
 				E8ECF2C12163A1EA00041BA8 /* BaseViewModel.swift in Sources */,
+				E820491B216506580050EAC4 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8ECF2B321639D5200041BA8 /* MVVM_SNSTests.swift in Sources */,
+				E820491E216512A80050EAC4 /* LoginViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
