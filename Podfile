@@ -6,6 +6,8 @@ target 'MVVM-SNS' do
   use_frameworks!
 
   # Pods for MVVM-SNS
+  pod 'RxObserve'
+
   pod 'RxSwift', '~>4.0'
   pod 'RxCocoa', '~>4.0'
 

@@ -3,6 +3,9 @@ PODS:
   - Quick (1.3.2)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
+  - RxObserve (0.2.0):
+    - RxCocoa (>= 4.0)
+    - RxSwift (>= 4.0)
   - RxSwift (4.3.1)
   - Swinject (2.5.0)
   - SwinjectStoryboard (2.0.2):
@@ -12,6 +15,7 @@ DEPENDENCIES:
   - Nimble (~> 7.0)
   - Quick (~> 1.0)
   - RxCocoa (~> 4.0)
+  - RxObserve
   - RxSwift (~> 4.0)
   - Swinject
   - SwinjectStoryboard
@@ -21,6 +25,7 @@ SPEC REPOS:
     - Nimble
     - Quick
     - RxCocoa
+    - RxObserve
     - RxSwift
     - Swinject
     - SwinjectStoryboard
@@ -29,10 +34,11 @@ SPEC CHECKSUMS:
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxObserve: e9db6baac31e14c2d0ff0f82fde75a2fd63e1afb
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
 
-PODFILE CHECKSUM: d53709a63a890b5ab45a11d7facb7b994a3c1d28
+PODFILE CHECKSUM: b2bbfc027aae03eb8298cb2386436817e7652bd1
 
 COCOAPODS: 1.5.0
