@@ -10,6 +10,10 @@
 		0D22E70FAB4B5F6552BFA475 /* Pods_MVVM_SNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EACB339DE23DBFD91E4985 /* Pods_MVVM_SNS.framework */; };
 		4541487384D1C92531006FC0 /* Pods_MVVM_SNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E4EC7E29D13499606FC6E6 /* Pods_MVVM_SNSTests.framework */; };
 		E82049112164E73B0050EAC4 /* RelayCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049102164E73B0050EAC4 /* RelayCommand.swift */; };
+		E82049132164F2CA0050EAC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049122164F2CA0050EAC4 /* User.swift */; };
+		E82049152164F2FE0050EAC4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049142164F2FE0050EAC4 /* Post.swift */; };
+		E82049172164F31B0050EAC4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049162164F31B0050EAC4 /* Comment.swift */; };
+		E82049192164F34C0050EAC4 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82049182164F34C0050EAC4 /* Like.swift */; };
 		E8ECF29E21639D5200041BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF29D21639D5200041BA8 /* AppDelegate.swift */; };
 		E8ECF2A021639D5200041BA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF29F21639D5200041BA8 /* ViewController.swift */; };
 		E8ECF2A321639D5200041BA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ECF2A121639D5200041BA8 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 		B0EACB339DE23DBFD91E4985 /* Pods_MVVM_SNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_SNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39940A65DC2C1D2B37AEE04 /* Pods-MVVM-SNSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-SNSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-SNSTests/Pods-MVVM-SNSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E82049102164E73B0050EAC4 /* RelayCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayCommand.swift; sourceTree = "<group>"; };
+		E82049122164F2CA0050EAC4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E82049142164F2FE0050EAC4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E82049162164F31B0050EAC4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		E82049182164F34C0050EAC4 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		E8ECF29A21639D5200041BA8 /* MVVM-SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-SNS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ECF29D21639D5200041BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8ECF29F21639D5200041BA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 		E8ECF2BD2163A06300041BA8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				E82049122164F2CA0050EAC4 /* User.swift */,
+				E82049142164F2FE0050EAC4 /* Post.swift */,
+				E82049162164F31B0050EAC4 /* Comment.swift */,
+				E82049182164F34C0050EAC4 /* Like.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -362,7 +374,11 @@
 			files = (
 				E8ECF2A021639D5200041BA8 /* ViewController.swift in Sources */,
 				E82049112164E73B0050EAC4 /* RelayCommand.swift in Sources */,
+				E82049192164F34C0050EAC4 /* Like.swift in Sources */,
 				E8ECF29E21639D5200041BA8 /* AppDelegate.swift in Sources */,
+				E82049172164F31B0050EAC4 /* Comment.swift in Sources */,
+				E82049152164F2FE0050EAC4 /* Post.swift in Sources */,
+				E82049132164F2CA0050EAC4 /* User.swift in Sources */,
 				E8ECF2C12163A1EA00041BA8 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
