@@ -45,7 +45,7 @@ class LoginViewModelSpec: QuickSpec {
       
       it("Logined") {
         // Asset
-        expect(viewModel.isLogined).to(beFalse())
+        expect(viewModel.isLoggedin).to(beFalse())
       }
     }
 
@@ -61,6 +61,7 @@ class LoginViewModelSpec: QuickSpec {
 
         it("Valid email") {
           // Act
+          viewModel.email = "asd"
           viewModel.email = "asd@example.com"
 
           // Assert
@@ -87,7 +88,7 @@ class LoginViewModelSpec: QuickSpec {
 
           // Asset
           expect(viewModel.error).to(contain(LoginViewModel.ErrorType.password("")))
-          expect(viewModel.isLogined).to(beFalse())
+          expect(viewModel.isLoggedin).to(beFalse())
         }
 
         it("Empty email field") {
@@ -99,7 +100,7 @@ class LoginViewModelSpec: QuickSpec {
           
           // Asset
           expect(viewModel.error).to(contain(LoginViewModel.ErrorType.email("")))
-          expect(viewModel.isLogined).to(beFalse())
+          expect(viewModel.isLoggedin).to(beFalse())
         }
 
         it("Wrong email") {
@@ -112,7 +113,7 @@ class LoginViewModelSpec: QuickSpec {
           
           // Asset
           expect(viewModel.error).to(contain(LoginViewModel.ErrorType.email("")))
-          expect(viewModel.isLogined).to(beFalse())
+          expect(viewModel.isLoggedin).to(beFalse())
         }
 
         it("Correct logined") {
@@ -124,7 +125,7 @@ class LoginViewModelSpec: QuickSpec {
           viewModel.loginCommand.execute(Void())
 
           // Asset
-          expect(viewModel.isLogined).to(beTrue())
+          expect(viewModel.isLoggedin).to(beTrue())
         }
       }
     }

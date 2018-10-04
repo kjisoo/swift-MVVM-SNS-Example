@@ -26,41 +26,48 @@ enum LoginErrorType: Equatable {
 
 class LoginViewModel: BaseViewModel, ErrorPropagative {
   typealias ErrorType = LoginErrorType
-
-  // Properties
+  
+  // Dynamic Properties
   dynamic var error: [ErrorType] = []
   dynamic var email = "" {
     didSet {
-      if self.email.isEmpty {
-        self.error = self.removedError(error: .email(""))
-      } else if EmailValidator.validate(email: self.email) == false {
-        self.error = self.updatedError(error: .email("Wrong Email"))
+      if email.isEmpty {
+        self.error.remove(element: .email(""))
+      } else {
+        self.updateEmailValidation()
       }
     }
   }
   dynamic var password = ""
-  dynamic var isLogined = false
+  dynamic var isLoggedin = false
   
   // MARK: Commands
   lazy var loginCommand = RelayCommand(execute: { [weak self] in
     self?.login()
   })
 
+  // MARK: Private func
   private func login() {
-    if self.email.isEmpty {
-      self.error = self.updatedError(error: .email("Email can not be blank."))
-    } else if EmailValidator.validate(email: self.email) == false {
-      self.error = self.updatedError(error: .email("Wrong Email"))
+    self.updateEmailValidation()
+    self.updatePasswordValidation()
+    self.isLoggedin = self.error.count == 0
+  }
+  
+  private func updateEmailValidation() {
+    let emailValidator = EmailValidator(email: self.email)
+
+    if let reason = emailValidator.reason {
+      self.error.update(element: .email(reason))
     } else {
-      self.error = self.removedError(error: .email(""))
+      self.error.remove(element: .email(""))
     }
-    
+  }
+
+  private func updatePasswordValidation() {
     if self.password.isEmpty {
-      self.error = self.updatedError(error: .password("Password can not be blank."))
+      self.error.update(element: .password("Password can not be blank."))
     } else {
-      self.error = self.removedError(error: .password(""))
+      self.error.remove(element: .password(""))
     }
-    
-    self.isLogined = self.error.count == 0
   }
 }

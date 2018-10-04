@@ -9,11 +9,27 @@
 import Foundation
 
 struct EmailValidator {
-  static func validate(email: String) -> Bool {
-    let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-    return email.range(of: regex,
-                       options: .regularExpression,
-                       range: nil,
-                       locale: nil) != nil
+  let isValid: Bool
+  let email: String
+  let reason: String?
+
+  private let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+  init(email: String) {
+    self.email = email
+    self.isValid = email.range(of: self.regex,
+                               options: .regularExpression,
+                               range: nil,
+                               locale: nil) != nil
+    
+    if self.isValid == false {
+      if email.isEmpty {
+        self.reason = "Email can not be blank."
+      } else {
+        self.reason = "Email format is invalid."
+      }
+    } else {
+      self.reason = nil
+    }
   }
 }

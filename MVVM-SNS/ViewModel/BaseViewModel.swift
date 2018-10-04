@@ -13,13 +13,14 @@ protocol ErrorPropagative {
   var error: [ErrorType] { get }
 }
 
-extension ErrorPropagative {
-  func updatedError(error: ErrorType) -> [ErrorType] {
-    return self.removedError(error: error) + [error]
+extension Array where Element: Equatable {
+  mutating func update(element: Element) {
+    self.remove(element: element)
+    self.append(element)
   }
 
-  func removedError(error: ErrorType) -> [ErrorType] {
-    return self.error.filter({ $0 != error })
+  mutating func remove(element: Element) {
+    self.removeAll { $0 == element }
   }
 }
 
