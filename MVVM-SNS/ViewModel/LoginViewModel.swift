@@ -26,9 +26,11 @@ enum LoginErrorType: Equatable {
 
 class LoginViewModel: BaseViewModel, ErrorPropagative {
   typealias ErrorType = LoginErrorType
-  
+
+  // Properties
+  private(set) var error: [LoginErrorType] = []
+
   // Dynamic Properties
-  dynamic var error: [ErrorType] = []
   dynamic var email = "" {
     didSet {
       if email.isEmpty {

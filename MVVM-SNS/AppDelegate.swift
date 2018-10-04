@@ -8,14 +8,28 @@
 
 import UIKit
 
+import Swinject
+import SwinjectStoryboard
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
   var window: UIWindow?
-  
+  var container: Container = {
+    let container = Container()
+    container.register(LoginViewModel.self, factory: { _ in LoginViewModel() })
+    container.storyboardInitCompleted(LoginViewController.self) { r, c in
+      c.viewModel = r.resolve(LoginViewModel.self)
+    }
+    return container
+  }()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+    self.window?.makeKeyAndVisible()
+    
+    let storyboard = SwinjectStoryboard.create(name: "LoginViewController", bundle: nil, container: container)
+    self.window?.rootViewController = storyboard.instantiateInitialViewController()
     return true
   }
   
