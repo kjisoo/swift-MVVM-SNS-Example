@@ -12,4 +12,4 @@ install:
   - pod install
 
 script:
-  - set -o pipefail && xcodebuild clean test -workspace MVVM-SNS.xcworkspace -scheme MVVM-SNS -sdk iphonesimulator -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
+  - set -o pipefail && xcodebuild clean test -workspace MVVM-SNS.xcworkspace -scheme MVVM-SNS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=12.0' -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty
