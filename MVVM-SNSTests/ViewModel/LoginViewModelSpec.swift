@@ -20,23 +20,6 @@ class LoginViewModelSpec: QuickSpec {
       viewModel = LoginViewModel()
     }
 
-    describe("Login Error type") {
-      it("Compare same type and parameter") {
-        // Asset
-        expect(LoginViewModel.ErrorType.email("A") == LoginViewModel.ErrorType.email("A")).to(beTrue())
-      }
-
-      it("Compare the same type and other parameter") {
-        // Asset
-        expect(LoginViewModel.ErrorType.email("A") == LoginViewModel.ErrorType.email("B")).to(beTrue())
-      }
-
-      it("Compare the same parameter and other type") {
-        // Asset
-        expect(LoginViewModel.ErrorType.email("A") == LoginViewModel.ErrorType.password("B")).to(beFalse())
-      }
-    }
-
     describe("Init state") {
       it("Empty error") {
         // Assert
@@ -56,7 +39,7 @@ class LoginViewModelSpec: QuickSpec {
           viewModel.email = "asd@"
 
           // Assert
-          expect(viewModel.error).to(contain(LoginViewModel.ErrorType.email("")))
+          expect(viewModel.error["email"]).notTo(beNil())
         }
 
         it("Valid email") {
@@ -87,7 +70,7 @@ class LoginViewModelSpec: QuickSpec {
           viewModel.loginCommand.execute(Void())
 
           // Asset
-          expect(viewModel.error).to(contain(LoginViewModel.ErrorType.password("")))
+          expect(viewModel.error["password"]).notTo(beNil())
           expect(viewModel.isLoggedin).to(beFalse())
         }
 
@@ -99,7 +82,7 @@ class LoginViewModelSpec: QuickSpec {
           viewModel.loginCommand.execute(Void())
           
           // Asset
-          expect(viewModel.error).to(contain(LoginViewModel.ErrorType.email("")))
+          expect(viewModel.error["email"]).notTo(beNil())
           expect(viewModel.isLoggedin).to(beFalse())
         }
 
@@ -112,7 +95,7 @@ class LoginViewModelSpec: QuickSpec {
           viewModel.loginCommand.execute(Void())
           
           // Asset
-          expect(viewModel.error).to(contain(LoginViewModel.ErrorType.email("")))
+          expect(viewModel.error["email"]).notTo(beNil())
           expect(viewModel.isLoggedin).to(beFalse())
         }
 

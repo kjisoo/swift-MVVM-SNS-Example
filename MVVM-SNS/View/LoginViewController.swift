@@ -22,40 +22,35 @@ class LoginViewController: BaseViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var passwordErrorLabel: UILabel!
   @IBOutlet weak var confirmButton: UIButton!
-
+  
   override func bind() {
-    // ViewModel to UI
-    self.viewModel.rx.asObservable(keyPath: \.email)
-      .bind(to: self.emailTextField.rx.text)
-      .disposed(by: self.disposeBag)
-    
-    self.viewModel.rx.asObservable(keyPath: \.password)
-      .bind(to: self.passwordTextField.rx.text)
-      .disposed(by: self.disposeBag)
-
-    // TODO: RxCollectionType
-//    self.viewModel.rx.asObservable(keyPath: \.error)
-//      .subscribe(onNext: { [weak self] (errors) in
-//        for error in errors {
-//          switch error {
-//          case .email(let text):
-//            self?.emailErrorLabel.text = text
-//          case .password(let text):
-//            self?.passwordErrorLabel.text = text
-//          }
-//        }
-//      })
-//      .disposed(by: self.disposeBag)
-
-    // UI to ViewModel
-    self.emailTextField.rx.text
-      .orEmpty
-      .bind(to: self.viewModel.rx.asObserver(keyPath: \.email))
-      .disposed(by: self.disposeBag)
-
-    self.passwordTextField.rx.text
-      .orEmpty
-      .bind(to: self.viewModel.rx.asObserver(keyPath: \.password))
-      .disposed(by: self.disposeBag)
+    self.disposeBag.insert(
+      // ViewModel to UI
+      self.viewModel.rx.asObservable(keyPath: \.email)
+        .bind(to: self.emailTextField.rx.text),
+      
+      self.viewModel.rx.asObservable(keyPath: \.password)
+        .bind(to: self.passwordTextField.rx.text),
+      
+      self.viewModel.rx.asObservable(keyPath: \.error)
+        .subscribe(onNext: { [weak self] (errors) in
+          self?.emailErrorLabel.text = errors["email"]
+          self?.passwordErrorLabel.text = errors["password"]
+        }),
+      
+      // UI to ViewModel
+      self.emailTextField.rx.text
+        .orEmpty
+        .bind(to: self.viewModel.rx.asObserver(keyPath: \.email)),
+      
+      self.passwordTextField.rx.text
+        .orEmpty
+        .bind(to: self.viewModel.rx.asObserver(keyPath: \.password)),
+      
+      self.confirmButton.rx.tap
+        .subscribe(onNext: { [weak self] in
+          self?.viewModel.loginCommand.execute(Void())
+        })
+    )
   }
 }

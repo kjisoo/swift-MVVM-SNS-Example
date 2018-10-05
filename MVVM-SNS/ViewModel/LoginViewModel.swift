@@ -8,40 +8,20 @@
 
 import Foundation
 
-enum LoginErrorType: Equatable {
-  case email(String)
-  case password(String)
-  
-  static func ==(lhs: LoginErrorType, rhs: LoginErrorType) -> Bool {
-    switch (lhs, rhs) {
-    case (.email, .email):
-      return true
-    case (.password, .password):
-      return true
-    default:
-      return false
-    }
-  }
-}
-
-class LoginViewModel: BaseViewModel, ErrorPropagative {
-  typealias ErrorType = LoginErrorType
-
-  // Properties
-  private(set) var error: [LoginErrorType] = []
-
-  // Dynamic Properties
+class LoginViewModel: BaseViewModel {
+  // MARK: Dynamic Properties
+  dynamic private(set) var error: Dictionary<String, String> = [:]
+  dynamic private(set) var isLoggedin = false
   dynamic var email = "" {
     didSet {
       if email.isEmpty {
-        self.error.remove(element: .email(""))
+        self.error.removeValue(forKey: "email")
       } else {
         self.updateEmailValidation()
       }
     }
   }
   dynamic var password = ""
-  dynamic var isLoggedin = false
   
   // MARK: Commands
   lazy var loginCommand = RelayCommand(execute: { [weak self] in
@@ -59,17 +39,18 @@ class LoginViewModel: BaseViewModel, ErrorPropagative {
     let emailValidator = EmailValidator(email: self.email)
 
     if let reason = emailValidator.reason {
-      self.error.update(element: .email(reason))
+      self.error["email"] = reason
+
     } else {
-      self.error.remove(element: .email(""))
+      self.error.removeValue(forKey: "email")
     }
   }
 
   private func updatePasswordValidation() {
     if self.password.isEmpty {
-      self.error.update(element: .password("Password can not be blank."))
+      self.error["password"] = "Password can not be blank."
     } else {
-      self.error.remove(element: .password(""))
+      self.error.removeValue(forKey: "password")
     }
   }
 }
