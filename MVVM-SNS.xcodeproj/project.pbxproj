@@ -20,6 +20,7 @@
 		E8D979842166521E00508740 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D979832166521E00508740 /* LoginViewController.swift */; };
 		E8D979862166522C00508740 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D979852166522C00508740 /* LoginViewController.storyboard */; };
 		E8D979882166591B00508740 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D979872166591B00508740 /* BaseViewController.swift */; };
+		E8D979902168731D00508740 /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D9798F2168731D00508740 /* MainTabBarController.storyboard */; };
 		E8ECF29E21639D5200041BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF29D21639D5200041BA8 /* AppDelegate.swift */; };
 		E8ECF2A521639D5200041BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ECF2A421639D5200041BA8 /* Assets.xcassets */; };
 		E8ECF2A821639D5200041BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ECF2A621639D5200041BA8 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,7 @@
 		E8D979832166521E00508740 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8D979852166522C00508740 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		E8D979872166591B00508740 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E8D9798F2168731D00508740 /* MainTabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
 		E8ECF29A21639D5200041BA8 /* MVVM-SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-SNS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ECF29D21639D5200041BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8ECF2A421639D5200041BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				E8D979872166591B00508740 /* BaseViewController.swift */,
 				E8D979832166521E00508740 /* LoginViewController.swift */,
 				E8D979852166522C00508740 /* LoginViewController.storyboard */,
+				E8D9798F2168731D00508740 /* MainTabBarController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D979902168731D00508740 /* MainTabBarController.storyboard in Resources */,
 				E8ECF2A821639D5200041BA8 /* LaunchScreen.storyboard in Resources */,
 				E8D979862166522C00508740 /* LoginViewController.storyboard in Resources */,
 				E8ECF2A521639D5200041BA8 /* Assets.xcassets in Resources */,

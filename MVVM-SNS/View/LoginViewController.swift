@@ -37,7 +37,13 @@ class LoginViewController: BaseViewController {
           self?.emailErrorLabel.text = errors["email"]
           self?.passwordErrorLabel.text = errors["password"]
         }),
-      
+
+      self.viewModel.rx.asObservable(keyPath: \.isLoggedin)
+        .filter { $0 }
+        .subscribe(onNext: { [weak self] (_) in
+          self?.performSegue(withIdentifier: "main", sender: nil)
+        }),
+
       // UI to ViewModel
       self.emailTextField.rx.text
         .orEmpty
