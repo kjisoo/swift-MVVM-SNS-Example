@@ -10,6 +10,8 @@ target 'MVVM-SNS' do
 
   pod 'RxSwift', '~>4.0'
   pod 'RxCocoa', '~>4.0'
+  pod 'RxDataSources'
+  pod 'Kingfisher'
 
   pod 'Swinject'
   pod 'SwinjectStoryboard'

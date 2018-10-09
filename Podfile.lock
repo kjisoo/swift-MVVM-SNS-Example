@@ -1,7 +1,13 @@
 PODS:
+  - Differentiator (3.1.0)
+  - Kingfisher (4.10.0)
   - Nimble (7.3.1)
   - Quick (1.3.2)
   - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxObserve (0.2.0):
     - RxCocoa (>= 4.0)
@@ -12,9 +18,11 @@ PODS:
     - Swinject (~> 2.4)
 
 DEPENDENCIES:
+  - Kingfisher
   - Nimble (~> 7.0)
   - Quick (~> 1.0)
   - RxCocoa (~> 4.0)
+  - RxDataSources
   - RxObserve
   - RxSwift (~> 4.0)
   - Swinject
@@ -22,23 +30,29 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Differentiator
+    - Kingfisher
     - Nimble
     - Quick
     - RxCocoa
+    - RxDataSources
     - RxObserve
     - RxSwift
     - Swinject
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxObserve: e9db6baac31e14c2d0ff0f82fde75a2fd63e1afb
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
 
-PODFILE CHECKSUM: b2bbfc027aae03eb8298cb2386436817e7652bd1
+PODFILE CHECKSUM: 00b3052adfdee4445ffaf1fb70490cabaaad3425
 
 COCOAPODS: 1.5.0
