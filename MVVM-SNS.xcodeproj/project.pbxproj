@@ -17,6 +17,7 @@
 		E820491B216506580050EAC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820491A216506580050EAC4 /* LoginViewModel.swift */; };
 		E820491E216512A80050EAC4 /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820491D216512A80050EAC4 /* LoginViewModelSpec.swift */; };
 		E820492121651D6E0050EAC4 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820492021651D6E0050EAC4 /* EmailValidator.swift */; };
+		E8C697E6216E53F900157025 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C697E5216E53F900157025 /* Identifiable.swift */; };
 		E8D979842166521E00508740 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D979832166521E00508740 /* LoginViewController.swift */; };
 		E8D979862166522C00508740 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D979852166522C00508740 /* LoginViewController.storyboard */; };
 		E8D979882166591B00508740 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D979872166591B00508740 /* BaseViewController.swift */; };
@@ -57,6 +58,7 @@
 		E820491A216506580050EAC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E820491D216512A80050EAC4 /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		E820492021651D6E0050EAC4 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		E8C697E5216E53F900157025 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		E8D979832166521E00508740 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8D979852166522C00508740 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		E8D979872166591B00508740 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		E8C697E4216E53ED00157025 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E8C697E5216E53F900157025 /* Identifiable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		E8D9799B216896E400508740 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 		E8ECF29C21639D5200041BA8 /* MVVM-SNS */ = {
 			isa = PBXGroup;
 			children = (
+				E8C697E4216E53ED00157025 /* Protocol */,
 				E8D9799B216896E400508740 /* Service */,
 				E820491F21651D620050EAC4 /* Validator */,
 				E8ECF2C22163BC1100041BA8 /* Command */,
@@ -431,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C697E6216E53F900157025 /* Identifiable.swift in Sources */,
 				E8D9799A2168968600508740 /* FeedViewModel.swift in Sources */,
 				E82049112164E73B0050EAC4 /* RelayCommand.swift in Sources */,
 				E82049192164F34C0050EAC4 /* Like.swift in Sources */,
