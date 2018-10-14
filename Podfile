@@ -26,11 +26,21 @@ target 'MVVM-SNS' do
     end
   end
 
-  target 'MVVM-SNSTests' do
+  target 'ViewModel' do
+    inherit! :search_paths
+  end
+
+  target 'ViewModelTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Quick', '~> 1.0'
     pod 'Nimble', '~> 7.0'
   end
 
+  target 'MVVM-SNSTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Quick', '~> 1.0'
+    pod 'Nimble', '~> 7.0'
+  end
 end

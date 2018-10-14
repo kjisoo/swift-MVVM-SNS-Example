@@ -8,5 +8,5 @@
 
 import Foundation
 
-class FeedViewModel: BaseViewModel {
+public class FeedViewModel: BaseViewModel {
 }

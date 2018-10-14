@@ -8,11 +8,11 @@
 
 import Foundation
 
-class LoginViewModel: BaseViewModel {
+public class LoginViewModel: BaseViewModel {
   // MARK: Dynamic Properties
-  dynamic private(set) var error: Dictionary<String, String> = [:]
-  dynamic private(set) var isLoggedin = false
-  dynamic var email = "" {
+  dynamic private(set) public var error: Dictionary<String, String> = [:]
+  dynamic private(set) public var isLoggedin = false
+  dynamic public var email = "" {
     didSet {
       if email.isEmpty {
         self.error.removeValue(forKey: "email")
@@ -21,10 +21,10 @@ class LoginViewModel: BaseViewModel {
       }
     }
   }
-  dynamic var password = ""
+  dynamic public var password = ""
   
   // MARK: Commands
-  lazy var loginCommand = RelayCommand(execute: { [weak self] in
+  public lazy var loginCommand = RelayCommand(execute: { [weak self] in
     self?.login()
   })
 

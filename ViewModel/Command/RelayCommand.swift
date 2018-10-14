@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class RelayCommand<Parameter> {
+public class RelayCommand<Parameter> {
   private var canExecuteClosure: (Parameter) -> Bool
   private var executeClosure: (Parameter) -> Void
 
@@ -19,11 +19,11 @@ class RelayCommand<Parameter> {
     self.canExecuteClosure = canExecute
   }
 
-  func canExecute(_ parameter: Parameter) -> Bool {
+  public func canExecute(_ parameter: Parameter) -> Bool {
     return self.canExecuteClosure(parameter)
   }
 
-  func execute(_ parameter: Parameter) {
+  public func execute(_ parameter: Parameter) {
     if self.canExecute(parameter) {
       self.executeClosure(parameter)
     }

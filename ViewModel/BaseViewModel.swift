@@ -9,5 +9,5 @@
 import Foundation
 
 @objcMembers
-class BaseViewModel: NSObject {
+public class BaseViewModel: NSObject {
 }

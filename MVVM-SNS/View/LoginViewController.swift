@@ -12,6 +12,8 @@ import RxObserve
 import RxSwift
 import RxCocoa
 
+import ViewModel
+
 class LoginViewController: BaseViewController {
   // For DI
   var viewModel: LoginViewModel!

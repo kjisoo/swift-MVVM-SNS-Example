@@ -11,6 +11,8 @@ import UIKit
 import Swinject
 import SwinjectStoryboard
 
+import ViewModel
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?

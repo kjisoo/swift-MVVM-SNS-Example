@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FeedListViewModel: BaseViewModel {
+public class FeedListViewModel: BaseViewModel {
   // MARK: Dynamic Properties
   dynamic var feeds: [FeedViewModel] = []
 }
