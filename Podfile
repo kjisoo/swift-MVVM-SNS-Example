@@ -1,16 +1,23 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
+
+def rx
+  pod 'RxSwift', '~>4.0'
+  pod 'RxCocoa', '~>4.0'
+  pod 'RxDataSources'
+  pod 'RxObserve'
+end
+
+def testing
+  pod 'Quick', '~> 1.0'
+  pod 'Nimble', '~> 7.0'
+end
 
 target 'MVVM-SNS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for MVVM-SNS
-  pod 'RxObserve'
+  rx
 
-  pod 'RxSwift', '~>4.0'
-  pod 'RxCocoa', '~>4.0'
-  pod 'RxDataSources'
   pod 'Kingfisher'
 
   pod 'Swinject'
@@ -26,21 +33,36 @@ target 'MVVM-SNS' do
     end
   end
 
-  target 'ViewModel' do
+  target 'MVVM-SNSTests' do
     inherit! :search_paths
+
+    testing
+
   end
+end
+
+target 'ViewModel' do
+  use_frameworks!
+
+  rx
 
   target 'ViewModelTests' do
     inherit! :search_paths
-    # Pods for testing
-    pod 'Quick', '~> 1.0'
-    pod 'Nimble', '~> 7.0'
-  end
 
-  target 'MVVM-SNSTests' do
+    testing
+
+  end 
+end
+
+target 'Model' do
+  use_frameworks!
+
+  rx
+
+  target 'ModelTests' do
     inherit! :search_paths
-    # Pods for testing
-    pod 'Quick', '~> 1.0'
-    pod 'Nimble', '~> 7.0'
+
+    testing
+
   end
 end

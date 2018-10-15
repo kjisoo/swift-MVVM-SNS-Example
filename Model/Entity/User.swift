@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct User {
-  let id: Int
-  let name: String
-  let profileImageURL: URL
+public struct User {
+  public let id: Int
+  public let name: String
+  public let profileImageURL: URL
 }

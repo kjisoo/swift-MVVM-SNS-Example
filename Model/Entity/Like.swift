@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Like {
-  let owner: User
+public struct Like {
+  public let owner: User
 }

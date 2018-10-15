@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Comment {
-  let id: Int
-  let owner: User
-  let content: String
+public struct Comment {
+  public let id: Int
+  public let owner: User
+  public let content: String
 }
