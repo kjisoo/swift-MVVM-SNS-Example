@@ -7,8 +7,16 @@
 //
 
 import Foundation
+import Model
 
 public class FeedListViewModel: BaseViewModel {
   // MARK: Dynamic Properties
   dynamic var feeds: [FeedViewModel] = []
+  
+  // MARK: Private properties
+  private let feedService: FeedServiceType
+  
+  init(feedService: FeedServiceType) {
+    self.feedService = feedService
+  }
 }

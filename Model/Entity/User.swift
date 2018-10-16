@@ -8,8 +8,14 @@
 
 import Foundation
 
-public struct User {
+public struct User: Codable {
   public let id: Int
   public let name: String
-  public let profileImageURL: URL
+  public let profileImageURL: URL?
+  
+  public init(id: Int, name: String, profileImageURL: URL?) {
+    self.id = id
+    self.name = name
+    self.profileImageURL = profileImageURL
+  }
 }

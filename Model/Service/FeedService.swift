@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-public protocol PostServiceType {
+public protocol FeedServiceType {
   func posts(page: Int) -> Single<[Post]>
   func posts(userID: Int) -> Single<[Post]>
   func post(id: Int) -> Single<Post>
