@@ -1,4 +1,7 @@
 PODS:
+  - Action (3.8.0):
+    - RxCocoa (~> 4.3.0)
+    - RxSwift (~> 4.3.0)
   - Differentiator (3.1.0)
   - Kingfisher (4.10.0)
   - Nimble (7.3.1)
@@ -18,6 +21,7 @@ PODS:
     - Swinject (~> 2.4)
 
 DEPENDENCIES:
+  - Action
   - Kingfisher
   - Nimble (~> 7.0)
   - Quick (~> 1.0)
@@ -30,6 +34,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Action
     - Differentiator
     - Kingfisher
     - Nimble
@@ -42,6 +47,7 @@ SPEC REPOS:
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
+  Action: 2275d04a407ecaf46a58d58a304388a28155a0a1
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
@@ -53,6 +59,6 @@ SPEC CHECKSUMS:
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
   SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
 
-PODFILE CHECKSUM: 6d47752f7e1ac3acda292a628b1587a5f6479f47
+PODFILE CHECKSUM: 3dce2cc013426b2282556b5130f494152e627fa9
 
 COCOAPODS: 1.5.0

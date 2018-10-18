@@ -5,6 +5,7 @@ def rx
   pod 'RxCocoa', '~>4.0'
   pod 'RxDataSources'
   pod 'RxObserve'
+  pod 'Action'
 end
 
 def testing
