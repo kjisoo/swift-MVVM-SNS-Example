@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000102AF217F596B00279B6C /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000102AE217F596B00279B6C /* Stream.swift */; };
 		075E720F75533513F1CA331A /* Pods_ModelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E402B3EF5444130BDC3E59 /* Pods_ModelTests.framework */; };
 		0D22E70FAB4B5F6552BFA475 /* Pods_MVVM_SNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EACB339DE23DBFD91E4985 /* Pods_MVVM_SNS.framework */; };
 		4541487384D1C92531006FC0 /* Pods_MVVM_SNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E4EC7E29D13499606FC6E6 /* Pods_MVVM_SNSTests.framework */; };
@@ -117,6 +118,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000102AE217F596B00279B6C /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		0653C6EBB1A84F95EA359787 /* Pods-ViewModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel.debug.xcconfig"; sourceTree = "<group>"; };
 		084BA9FDCFBEF14B053FAFA5 /* Pods-MVVM-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-SNS/Pods-MVVM-SNS.release.xcconfig"; sourceTree = "<group>"; };
 		0A4BE25599F5AD2F7BE53CDA /* Pods-ModelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModelTests/Pods-ModelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000102B0217F671F00279B6C /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				000102AE217F596B00279B6C /* Stream.swift */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
 		7ED45AB972A82980DB81B149 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +278,7 @@
 		E8C697ED2173835200157025 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				000102B0217F671F00279B6C /* Stream */,
 				E8C69812217385AD00157025 /* Protocol */,
 				E8C6980F217383AE00157025 /* Validator */,
 				E8C6980E2173839300157025 /* Command */,
@@ -944,6 +955,7 @@
 				E8C6980B2173838400157025 /* FeedViewModel.swift in Sources */,
 				E8C6980A2173838400157025 /* LoginViewModel.swift in Sources */,
 				E8C6980D2173838400157025 /* FeedListViewModel.swift in Sources */,
+				000102AF217F596B00279B6C /* Stream.swift in Sources */,
 				E8C69810217383DA00157025 /* RelayCommand.swift in Sources */,
 				E8C69813217385B500157025 /* Identifiable.swift in Sources */,
 				E8C6980C2173838400157025 /* BaseViewModel.swift in Sources */,

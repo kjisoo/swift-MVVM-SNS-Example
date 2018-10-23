@@ -9,6 +9,6 @@
 import Foundation
 
 protocol Identifiable {
-  associatedtype IDType: Comparable
+  associatedtype IDType: Comparable & Hashable
   var id: IDType { get }
 }
