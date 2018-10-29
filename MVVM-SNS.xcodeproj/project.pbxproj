@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		000102AF217F596B00279B6C /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000102AE217F596B00279B6C /* Stream.swift */; };
+		0010D8812187473600747286 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010D8802187473600747286 /* ModelViewModel.swift */; };
+		0010D88321874D2600747286 /* ModelViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010D88221874D2600747286 /* ModelViewModelSpec.swift */; };
 		075E720F75533513F1CA331A /* Pods_ModelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E402B3EF5444130BDC3E59 /* Pods_ModelTests.framework */; };
 		0D22E70FAB4B5F6552BFA475 /* Pods_MVVM_SNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EACB339DE23DBFD91E4985 /* Pods_MVVM_SNS.framework */; };
 		4541487384D1C92531006FC0 /* Pods_MVVM_SNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E4EC7E29D13499606FC6E6 /* Pods_MVVM_SNSTests.framework */; };
@@ -119,6 +121,8 @@
 
 /* Begin PBXFileReference section */
 		000102AE217F596B00279B6C /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		0010D8802187473600747286 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
+		0010D88221874D2600747286 /* ModelViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModelSpec.swift; sourceTree = "<group>"; };
 		0653C6EBB1A84F95EA359787 /* Pods-ViewModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel.debug.xcconfig"; sourceTree = "<group>"; };
 		084BA9FDCFBEF14B053FAFA5 /* Pods-MVVM-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-SNS/Pods-MVVM-SNS.release.xcconfig"; sourceTree = "<group>"; };
 		0A4BE25599F5AD2F7BE53CDA /* Pods-ModelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModelTests/Pods-ModelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				E8C6980F217383AE00157025 /* Validator */,
 				E8C6980E2173839300157025 /* Command */,
 				E8ECF2C02163A1EA00041BA8 /* BaseViewModel.swift */,
+				0010D8802187473600747286 /* ModelViewModel.swift */,
 				E820491A216506580050EAC4 /* LoginViewModel.swift */,
 				E8D979972168955000508740 /* FeedListViewModel.swift */,
 				E8D979992168968600508740 /* FeedViewModel.swift */,
@@ -298,6 +303,7 @@
 				E8C6984921761FB700157025 /* Mock */,
 				E8C697FB2173835200157025 /* LoginViewModelSpec.swift */,
 				E8C6984721761F8500157025 /* FeedListViewModelSpec.swift */,
+				0010D88221874D2600747286 /* ModelViewModelSpec.swift */,
 				E8C697FD2173835200157025 /* Info.plist */,
 			);
 			path = ViewModelTests;
@@ -960,6 +966,7 @@
 				E8C69813217385B500157025 /* Identifiable.swift in Sources */,
 				E8C6980C2173838400157025 /* BaseViewModel.swift in Sources */,
 				E8C69811217383DE00157025 /* EmailValidator.swift in Sources */,
+				0010D8812187473600747286 /* ModelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,6 +977,7 @@
 				E8C6984B21761FC400157025 /* StubFeedService.swift in Sources */,
 				E8C697FC2173835200157025 /* LoginViewModelSpec.swift in Sources */,
 				E8C6984821761F8500157025 /* FeedListViewModelSpec.swift in Sources */,
+				0010D88321874D2600747286 /* ModelViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
