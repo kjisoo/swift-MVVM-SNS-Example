@@ -8,5 +8,10 @@
 
 import Foundation
 
+import Model
+
 public class FeedViewModel: BaseViewModel {
+  init(post: Post) {
+    
+  }
 }
