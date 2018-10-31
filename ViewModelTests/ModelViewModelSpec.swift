@@ -25,8 +25,8 @@ class ModelViewModelSpec: QuickSpec {
       expectation.expectedFulfillmentCount = 2
       let streamFactory = StreamFactory<Model>()
       let model = Model(id: 1, name: "First")
-      let firstViewModel = ModelViewModel(streamFactory: streamFactory, model: model)
-      let secondViewModel = ModelViewModel(streamFactory: streamFactory, model: model)
+      let firstViewModel = ModelViewModel(streamFactory: streamFactory, id: model.id)
+      let secondViewModel = ModelViewModel(streamFactory: streamFactory, id: model.id)
       _ = firstViewModel.modelObservable.subscribe(onNext: { (model) in
         if model.name == "Second" {
           expectation.fulfill()
@@ -50,8 +50,8 @@ class ModelViewModelSpec: QuickSpec {
       let expectation = self.expectation(description: "Next Model")
       expectation.expectedFulfillmentCount = 1
       let streamFactory = StreamFactory<Model>()
-      let firstViewModel = ModelViewModel(streamFactory: streamFactory, model: Model(id: 1, name: "First"))
-      let secondViewModel = ModelViewModel(streamFactory: streamFactory, model: Model(id: 2, name: "First"))
+      let firstViewModel = ModelViewModel(streamFactory: streamFactory, id: Model(id: 1, name: "First").id)
+      let secondViewModel = ModelViewModel(streamFactory: streamFactory, id: Model(id: 2, name: "First").id)
       _ = firstViewModel.modelObservable.subscribe(onNext: { (model) in
         if model.name == "Third" {
           expectation.fulfill()

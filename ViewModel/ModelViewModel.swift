@@ -16,8 +16,8 @@ class ModelViewModel<Model: Identifiable>: BaseViewModel {
 
   internal let modelObservable: Observable<Model>
   
-  init(streamFactory: StreamFactory<Model>, model: Model) {
-    self.stream = streamFactory.connect(id: model.id)
+  init(streamFactory: StreamFactory<Model>, id: Model.IDType) {
+    self.stream = streamFactory.connect(id: id)
     self.stream.subscribe(observer: self.modelObserver.asObserver()).disposed(by: self.disposeBag)
     self.modelObservable = self.modelObserver.asObservable()
   }

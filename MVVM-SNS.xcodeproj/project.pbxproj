@@ -10,6 +10,8 @@
 		000102AF217F596B00279B6C /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000102AE217F596B00279B6C /* Stream.swift */; };
 		0010D8812187473600747286 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010D8802187473600747286 /* ModelViewModel.swift */; };
 		0010D88321874D2600747286 /* ModelViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010D88221874D2600747286 /* ModelViewModelSpec.swift */; };
+		0010D8862189DC8D00747286 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010D8852189DC8D00747286 /* Post.swift */; };
+		0010D8882189DE3C00747286 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010D8872189DE3C00747286 /* CommentViewModel.swift */; };
 		075E720F75533513F1CA331A /* Pods_ModelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E402B3EF5444130BDC3E59 /* Pods_ModelTests.framework */; };
 		0D22E70FAB4B5F6552BFA475 /* Pods_MVVM_SNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EACB339DE23DBFD91E4985 /* Pods_MVVM_SNS.framework */; };
 		4541487384D1C92531006FC0 /* Pods_MVVM_SNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E4EC7E29D13499606FC6E6 /* Pods_MVVM_SNSTests.framework */; };
@@ -123,6 +125,8 @@
 		000102AE217F596B00279B6C /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		0010D8802187473600747286 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
 		0010D88221874D2600747286 /* ModelViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModelSpec.swift; sourceTree = "<group>"; };
+		0010D8852189DC8D00747286 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0010D8872189DE3C00747286 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		0653C6EBB1A84F95EA359787 /* Pods-ViewModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel.debug.xcconfig"; sourceTree = "<group>"; };
 		084BA9FDCFBEF14B053FAFA5 /* Pods-MVVM-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-SNS/Pods-MVVM-SNS.release.xcconfig"; sourceTree = "<group>"; };
 		0A4BE25599F5AD2F7BE53CDA /* Pods-ModelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModelTests/Pods-ModelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +251,14 @@
 			path = Stream;
 			sourceTree = "<group>";
 		};
+		0010D8842189DC8000747286 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0010D8852189DC8D00747286 /* Post.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		7ED45AB972A82980DB81B149 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +294,7 @@
 		E8C697ED2173835200157025 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0010D8842189DC8000747286 /* Entity */,
 				000102B0217F671F00279B6C /* Stream */,
 				E8C69812217385AD00157025 /* Protocol */,
 				E8C6980F217383AE00157025 /* Validator */,
@@ -291,6 +304,7 @@
 				E820491A216506580050EAC4 /* LoginViewModel.swift */,
 				E8D979972168955000508740 /* FeedListViewModel.swift */,
 				E8D979992168968600508740 /* FeedViewModel.swift */,
+				0010D8872189DE3C00747286 /* CommentViewModel.swift */,
 				E8C697EE2173835200157025 /* ViewModel.h */,
 				E8C697EF2173835200157025 /* Info.plist */,
 			);
@@ -963,10 +977,12 @@
 				E8C6980D2173838400157025 /* FeedListViewModel.swift in Sources */,
 				000102AF217F596B00279B6C /* Stream.swift in Sources */,
 				E8C69810217383DA00157025 /* RelayCommand.swift in Sources */,
+				0010D8882189DE3C00747286 /* CommentViewModel.swift in Sources */,
 				E8C69813217385B500157025 /* Identifiable.swift in Sources */,
 				E8C6980C2173838400157025 /* BaseViewModel.swift in Sources */,
 				E8C69811217383DE00157025 /* EmailValidator.swift in Sources */,
 				0010D8812187473600747286 /* ModelViewModel.swift in Sources */,
+				0010D8862189DC8D00747286 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
