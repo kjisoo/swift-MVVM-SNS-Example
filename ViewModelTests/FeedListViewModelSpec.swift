@@ -25,6 +25,14 @@ class FeedListViewModelSpec: QuickSpec {
         // Assert
         expect(feedListViewModel.feeds.count).toEventually(equal(20))
       }
+      
+      it("Load next page") {
+        // Act
+        feedListViewModel.loadMoreAction.execute(Void())
+        
+        // Assert
+        expect(feedListViewModel.feeds.count).toEventually(equal(40))
+      }
     }
   }
 }
